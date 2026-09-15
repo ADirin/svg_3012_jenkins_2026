@@ -21,7 +21,7 @@
             <version>5.14.2</version>
             <scope>test</scope>
         </dependency>
-
+<!--this is a -->
         <dependency>
             <groupId>org.jacoco</groupId>
             <artifactId>jacoco-maven-plugin</artifactId>
@@ -39,9 +39,8 @@
     <!-- not works-->
 
     <build>
-        <finalName>svg_3012</finalName>
+      <finalName>svg_3012</finalName>
         <plugins>
-
             <!-- JAR Plugin for configuring the manifest file -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
