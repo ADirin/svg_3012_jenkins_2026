@@ -1,26 +1,25 @@
-pipeline{
+pipeline {
     agent any
     stages {
-        stage('check'){
-            echo 'in this phase we check the git and get access to github'
-        }
-        stage ('build'){
+        stage('Check') {
             steps {
-                echo 'we build for example mvn build'
+                echo 'In this phase we check the git and get access to GitHub'
             }
         }
-        stage ('install') {
+        stage('Build') {
             steps {
-                echo 'we install for example print the jacoco'
+                echo 'We build, for example mvn build'
             }
         }
-        stage ('surfire') {
+        stage('Install') {
             steps {
-                echo 'print xml file of the test'
+                echo 'We install, for example print the JaCoCo report'
             }
         }
-
+        stage('Surefire') {
+            steps {
+                echo 'Print XML file of the test'
+            }
+        }
     }
-
-
 }
