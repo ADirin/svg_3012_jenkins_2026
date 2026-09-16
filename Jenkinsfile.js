@@ -21,5 +21,10 @@ pipeline {
                 echo 'Print XML file of the test'
             }
         }
+        stage('nothing'){
+            steps{
+                echo 'nothing'
+            }
+        }
     }
 }
