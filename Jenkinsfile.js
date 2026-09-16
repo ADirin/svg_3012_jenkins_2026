@@ -3,27 +3,27 @@ pipeline {
     stages {
         stage('Check') {
             steps {
-                echo 'In this phase we check the git and get access to GitHub'
+                git 'https://github.com/ADirin/svg_3012_jenkins_2026.git'
             }
         }
         stage('Build') {
             steps {
-                echo 'We build, for example mvn build'
+                bat 'mvn clean install'
             }
         }
-        stage('Install') {
+        stage('Test') {
             steps {
-                echo 'We install, for example print the JaCoCo report'
+                bat 'mvn test'
             }
         }
-        stage('Surefire') {
+        stage('code coverage') {
             steps {
-                echo 'Print XML file of the test'
+                bat 'mvn jacoco:report'
             }
         }
-        stage('nothing'){
+        stage('Test Results'){
             steps{
-                echo 'nothing'
+                junit '**/target/surefire-reports/*.xml'
             }
         }
     }
