@@ -39,7 +39,7 @@
     <!-- not works-->
 
     <build>
-      <finalName>svg_3012</finalName>
+        <finalName>svg_3012</finalName>
         <plugins>
             <!-- JAR Plugin for configuring the manifest file -->
             <plugin>
